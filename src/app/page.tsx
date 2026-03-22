@@ -111,6 +111,7 @@ export default function Home() {
         <nav className="flex items-center gap-8 text-sm font-medium">
           <Link href="#" className="text-teal-600 border-b-2 border-teal-600">Home</Link>
           <Link href="#demo" className="text-slate-700 hover:text-teal-600">Try Demo</Link>
+          <Link href="/dashboard" className="text-slate-700 hover:text-teal-600">Dashboard</Link>
           <Link href="#features" className="text-slate-700 hover:text-teal-600">Features</Link>
           <Link href="#contact" className="text-slate-700 hover:text-teal-600">Contact</Link>
         </nav>
