@@ -25,7 +25,7 @@ export default function Home() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer demo-key'
+          'x-api-key': 'a2d547e8ad217ca5015ea14e6aa01b0ba46526d71f3d719299ab7e1c874eebaa'
         },
         body: JSON.stringify(data)
       });
@@ -60,7 +60,7 @@ export default function Home() {
     try {
       const response = await fetch('https://medisync-onye.vercel.app/api/admin/cost-monitor?date_range=7d', {
         headers: {
-          'Authorization': 'Bearer demo-key'
+          'x-api-key': 'a2d547e8ad217ca5015ea14e6aa01b0ba46526d71f3d719299ab7e1c874eebaa'
         }
       });
       const result = await response.json();
@@ -339,7 +339,7 @@ export default function Home() {
 
           <div className="mt-8 text-center">
             <p className="text-sm text-slate-500">
-              💡 <strong>Demo Mode:</strong> Using sample API key for testing. For production use, contact Onye Inc for authentication setup.
+              💡 <strong>Demo Mode:</strong> Using production API key for live testing. Features work with real AI processing and database logging.
             </p>
           </div>
         </div>
