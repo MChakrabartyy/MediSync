@@ -32,7 +32,7 @@ export default function Home() {
       const result = await response.json();
       setResult(JSON.stringify(result, null, 2));
     } catch (error) {
-      setResult(`Error: ${error.message}`);
+      setResult(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
     setLoading(false);
   };
@@ -42,7 +42,7 @@ export default function Home() {
       const data = { records: JSON.parse(reconcileInput) };
       callAPI('reconcile/medication', data);
     } catch (error) {
-      setResult(`Invalid JSON: ${error.message}`);
+      setResult(`Invalid JSON: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   };
 
@@ -51,7 +51,7 @@ export default function Home() {
       const data = JSON.parse(qualityInput);
       callAPI('validate/data-quality', data);
     } catch (error) {
-      setResult(`Invalid JSON: ${error.message}`);
+      setResult(`Invalid JSON: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   };
 
@@ -66,7 +66,7 @@ export default function Home() {
       const result = await response.json();
       setResult(JSON.stringify(result, null, 2));
     } catch (error) {
-      setResult(`Error: ${error.message}`);
+      setResult(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
     setLoading(false);
   };
